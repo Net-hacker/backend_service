@@ -31,7 +31,7 @@ wss.on('connection', (ws) => {
     }
   });
 
-  ws.on('close' () => {
+  ws.on('close', () => {
     rooms[ws.roomId]?.delete(ws);
     rooms[ws.roomId]?.forEach(client => {
       client.send(JSON.stringify({ type: 'peer_left', id: ws.playerId }));
