@@ -1,6 +1,6 @@
 const { WebSocketServer } = require('ws');
 
-const PORT = process.env.PORT || 10000;
+const PORT = process.env.PORT || 9080;
 const wss = new WebSocketServer({ port: PORT });
 
 const rooms = {};
